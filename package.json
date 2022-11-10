@@ -1,0 +1,22 @@
+{
+  "name": "cypress-golden-test",
+  "version": "1.0.0",
+  "description": "Create golden test to compare snapshot image",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDant/cypress-goldentest-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrDant/cypress-goldentest-plugin/issues"
+  },
+  "homepage": "https://github.com/MrDant/cypress-goldentest-plugin#readme",
+  "dependencies": {
+    "pngjs": "^6.0.0"
+  }
+}

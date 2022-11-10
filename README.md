@@ -1,16 +1,18 @@
-# cypress-plugins
+# Cypress goldentest plugin
 
-Creation de plugins pour cypress
+A plugin to compare image snapshot
 
 ## Install
 
 ```
-npm i git+https://github.com/MrDant/cypress-plugins.git
+npm i git+https://github.com/MrDant/cypress-goldentest-plugin.git
 ```
 
 ## Setup
 
-```cypress.config.js
+_`./cypress.config.js`_
+
+```js
 import { defineConfig } from 'cypress';
 import goldenTest from 'cypress-golden-test'
 export default defineConfig({
@@ -24,6 +26,22 @@ export default defineConfig({
 });
 ```
 
-```cypress/support.js
-import goldenTest from 'cypress-golden-test/command'
+_`./cypress/support/e2e.(js/ts)`_
+
+```js
+import goldenTest from "cypress-golden-test/src/command";
+```
+
+## To use
+
+_`./cypress/exemple.cy.js`_
+
+```js
+describe("Home goldenTest", () => {
+  it("goldenTest", () => {
+    cy.visit("/");
+    cy.get("header");
+    cy.goldenTest();
+  });
+});
 ```
